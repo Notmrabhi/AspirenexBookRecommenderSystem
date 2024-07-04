@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommender System</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .navbar{
+            display: flex;
+            justify-content:space-between;
+        }
+        .l1{
+            color: #0a0909;
+            font-weight: 400;
+            font-size: 25px;
+            font-family:"Rubik", sans-serif;;
+            
+        }
+        .l2{
+            color: #000;
+            font-weight: 400;
+            font-weight: 400;
+            font-size: 25px;
+            font-family:"Rubik", sans-serif;;
+        }
+        .text-white {
+            color: rgb(5, 4, 4);
+            font-family:"Rubik", sans-serif;
+            
+        }
+        .books-of-sujeesh {
+            background: linear-gradient(-70deg, #efe9d6 0%, #f5ebca 80%, #e8dab1 80%, #f3efe3 80%);
+            padding: 20px;
+        }
+        .book-card {
+            background: #fff;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 240px;
+            text-align: center;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .book-card:hover {
+            transform: scale(1.05);
+        }
+        .book-card h3 {
+            font-size: 18px;
+            min-height: 42px;
+            margin: 15px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .book-card img {
+            width: 100%;
+            height: 300px; /* Set a fixed height for the images */
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .book-name{
+           font-family:"Rubik", sans-serif;
+           
+        }
+        .price {
+            color: rgb(120, 118, 118);
+            font-size: 16px;
+            margin: 5px 0;
+            font-family:"Rubik", sans-serif;;
+        }
+        .book-card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 14px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .book-card button:hover, .unavailable {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="books-of-sujeesh">
+    <div class="navbar" style="background-color:#e7c769">
+        <div class="l1 navbar-brand">Book Recommender</div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a class="l2" href="/">Home</a></li>
+                <li><a class="l2" href="/recommend">Get Recommendations</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-white" style="font-size:50px; text-align: center;">Top 50 Books</h1>
+            </div>
+
+            {% for i in range(book_name|length) %}
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="book-card">
+                        <img class="card-img-top" src="{{ image[i] }}" alt="{{ book_name[i] }}">
+                        <h3 class="book-name">{{ book_name[i] }}</h3>
+                        <p class="price">{{ author[i] }}</p>
+                        <h4 class="price">Votes - {{ votes[i] }}</h4>
+                        <h4 class="price">Rating - {{ rating[i] }}</h4>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

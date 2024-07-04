@@ -1,0 +1,50 @@
+.books-of-sujeesh {
+  background: linear-gradient(-8deg, #efe9d6 0%, #efe9d6 80%, #f3efe3 80%, #f3efe3 80%);
+}
+
+#sujeesh-books {
+  margin: 0 auto;
+}
+
+.book-sec-head {
+  font-size: 22px;
+  text-align:center;
+}
+
+.book-card {
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+.book-card h3 {
+font-size: 16px;
+  min-height: 42px;
+}
+
+.book-card img {
+width:100%;
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.price {
+  color: grey;
+  font-size: 16px;
+}
+
+.book-card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 45px;
+  max-width: 240px;
+}
+
+.book-card button:hover, .unavailable {
+  opacity: 0.7;
+}
