@@ -2,5 +2,4 @@ csv files
 app.py
 book-recommender-system.ipynb
 
-pt.pkl
 similarity_scores.pkl
