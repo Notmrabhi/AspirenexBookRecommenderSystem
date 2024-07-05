@@ -1,4 +1,4 @@
-flask
-numpy
-pandas
+flask==1.1.2
+numpy==1.20.3
+pandas==1.4.1
 gunicorn
