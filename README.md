@@ -28,7 +28,7 @@ The dataset used for the recommender system is taken from [Kaggle](https://www.k
 2. **Install Dependencies**
    
    ```bash
-   $ (venv) pip install Flask==1.1.2 numpy==1.20.3 pandas==1.4.1 
+   $ pip install Flask==1.1.2 numpy==1.20.3 pandas==1.4.1 
    ```
 
 3. **Prepare the Data**
