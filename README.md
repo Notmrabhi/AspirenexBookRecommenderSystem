@@ -45,9 +45,3 @@ The dataset used for the recommender system is taken from [Kaggle](https://www.k
 6. **For the Demo of the Project, watch the video tutorial**
    [Click here]([https://youtu.be/Ycsc2ugyIp0?si=J3q5oY9W9e78m9RH](https://youtu.be/hsnswqR760c?si=W6f4p46dfTATK0Lt)).
 
-## Usage
-Instructions on how to use your recommender system will be provided here. Describe how users can input their preferences and how the system generates recommendations.
-
-
-
-Replace `yourusername` with your actual GitHub username and provide additional details specific to your project where necessary. This template includes the necessary steps for setting up, running, and optionally deploying the Book Recommender system using the specified tech stack.
