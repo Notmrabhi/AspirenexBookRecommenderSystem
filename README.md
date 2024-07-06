@@ -18,7 +18,7 @@ The dataset used for the recommender system is taken from [Kaggle](https://www.k
 
 1. **Clone the Repository and Create a Virtual Environment**
    - Clone the repository and navigate into the project directory.
-   - Create and activate a virtual environment.
+   
    
    ```bash
    $ https://github.com/Notmrabhi/AspirenexBookRecommenderSystem.git
