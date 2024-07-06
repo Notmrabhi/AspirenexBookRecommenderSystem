@@ -1,135 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Book Recommender System</title>
     <!-- Latest compiled and minified CSS -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">        
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <style>
-        .navbar{
-            display: flex;
-            justify-content:space-between;
-        }
-        .l1{
-            color: #0a0909;
-            font-weight: 400;
-            font-size: 25px;
-            font-family:"Rubik", sans-serif;
-            
-        }
-        .l2{
-            color: #000;
-            font-weight: 400;
-            font-weight: 400;
-            font-size: 25px;
-            font-family:"Rubik", sans-serif;
-        }
-        .books-of-sujeesh {
-            background: linear-gradient(-70deg, #efe9d6 0%, #f5ebca 80%, #e8dab1 80%, #f3efe3 80%);
-            padding: 20px;
-        }
-        .navbar-custom {
-            background-color: #00a65a;
-        }
-        .book-card {
-            background: #fff;
-            border-radius: 5px;
-            margin: 20px auto;
-            max-width: 240px;
-            text-align: center;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-        .book-card img {
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        .book-card h3,
-        .book-card p,
-        .book-card h4 {
-            margin: 10px 0;
-        }
-        .btn-warning-custom {
-            background-color: #ff9800;
-            border-color: #ff9800;
-        }
-        .btn-warning-custom:hover {
-            background-color: #e68900;
-            border-color: #e68900;
-        }
-        .f{
-            font-weight: 400;
-            font-size: 18px;
-            font-family:"Rubik", sans-serif;
-        }
-        .book-card button {
-            border: none;
-            outline: 0;
-            padding: 12px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 14px;
-            margin-top: 15px;
-            border-radius: 5px;
-        }
-        .book-card button:hover, .unavailable {
-            opacity: 0.7;
-        }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+      }
+      .l1 {
+        color: #0a0909;
+        font-weight: 400;
+        font-size: 25px;
+        font-family: "Rubik", sans-serif;
+      }
+      .l2 {
+        color: #000;
+        font-weight: 400;
+        font-weight: 400;
+        font-size: 25px;
+        font-family: "Rubik", sans-serif;
+      }
+      .books-of-sujeesh {
+        background: linear-gradient(
+          -70deg,
+          #efe9d6 0%,
+          #f5ebca 80%,
+          #e8dab1 80%,
+          #f3efe3 80%
+        );
+        padding: 20px;
+      }
+      .navbar-custom {
+        background-color: #00a65a;
+      }
+      .book-card {
+        background: #fff;
+        border-radius: 5px;
+        margin: 20px auto;
+        max-width: 240px;
+        text-align: center;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .book-card img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .book-card h3,
+      .book-card p,
+      .book-card h4 {
+        margin: 10px 0;
+      }
+      .btn-warning-custom {
+        background-color: #ff9800;
+        border-color: #ff9800;
+      }
+      .btn-warning-custom:hover {
+        background-color: #e68900;
+        border-color: #e68900;
+      }
+      .f {
+        font-weight: 400;
+        font-size: 18px;
+        font-family: "Rubik", sans-serif;
+      }
+      .book-card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 14px;
+        margin-top: 15px;
+        border-radius: 5px;
+      }
+      .book-card button:hover,
+      .unavailable {
+        opacity: 0.7;
+      }
     </style>
-</head>
-<body class="books-of-sujeesh">
-
-    <div class="navbar" style="background-color:#e7c769">
-        <div class="l1 navbar-brand">Book Recommender</div>
-        <div>
-            <ul class="nav navbar-nav">
-                <li><a class="l2" href="/">Home</a></li>
-                <li><a class="l2" href="/recommend">Get Recommendations</a></li>
-            </ul>
-        </div>
+  </head>
+  <body class="books-of-sujeesh">
+    <div class="navbar" style="background-color: #e7c769">
+      <div class="l1 navbar-brand">Book Recommender</div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a class="l2" href="/">Home</a></li>
+          <li><a class="l2" href="/recommend">Get Recommendations</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="text-white f" style="font-size: 50px; margin-top: 30px;">Find Your Perfect Read</h1>
-                <form action="/recommend_books" method="post" class="form-inline" style="margin-top: 20px;">
-                    <input name="user_input" type="text" class="form-control input-lg" style="width: 70%;" placeholder="Enter book name...">
-                    <input type="submit" class="btn btn-lg btn-warning-custom">
-                </form>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="text-white f" style="font-size: 50px; margin-top: 30px">
+            Find Your Perfect Read
+          </h1>
+          <form
+            action="/recommend_books"
+            method="post"
+            class="form-inline"
+            style="margin-top: 20px"
+          >
+            <input
+              name="user_input"
+              type="text"
+              class="form-control input-lg"
+              style="width: 70%"
+              placeholder="Enter book name..."
+            />
+            <input type="submit" class="btn btn-lg btn-warning-custom" />
+          </form>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px">
+        {% if message %}
+        <p>{{ message }}</p>
+        {% else %}
+        <div class="row" style="margin-top: 50px">
+          {% if data %} {% for i in data %} {% if i[0] and i[1] and i[2] %}
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="book-card">
+              <img class="card-img-top" src="{{ i[2] }}" alt="{{ i[0] }}" />
+              <h3 class="book-name f">{{ i[0] }}</h3>
+              <p class="writer_name f">{{ i[1] }}</p>
+              <button class="f">Buy Now</button>
             </div>
+          </div>
+          {% endif %} {% endfor %} {% endif %}
         </div>
-        <div class="row" style="margin-top: 50px;">
-            {% if data %}
-                {% for i in data %}
-                    {% if i[0] and i[1] and i[2] %}
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="book-card">
-                                <img class="card-img-top" src="{{ i[2] }}" alt="{{ i[0] }}">
-                                <h3 class="book-name f" >{{ i[0] }}</h3>
-                                <p class="writer_name f">{{ i[1] }}</p>
-                                <button class="f">Buy Now</button>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        </div>
+        {% endif %}
+      </div>
     </div>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Xs5IjH2k9WvH1QD8B8xUdfU8Crz8TOh+k5Sb1zC9P/+cA7Q/g7T74/ZlbL1nN2t0" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Xs5IjH2k9WvH1QD8B8xUdfU8Crz8TOh+k5Sb1zC9P/+cA7Q/g7T74/ZlbL1nN2t0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
